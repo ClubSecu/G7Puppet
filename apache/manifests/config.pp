@@ -1,10 +1,12 @@
 class apache::config {
-    file { "${apache::params::www_path}/error":
-        path => "${apache::params::www_path}/error",
+    file { "ERROR - Directory":
         ensure => directory,
+        owner => $apache::params::owner,
+        path => "${apache::params::www_path}/error",
     }
-    file { "${apache::params::www_path}/error/404.html" :
-        source => "404.html",
+    file { "ERROR - 404.html - File" :
+        path => "${apache::params::www_path}/error/404.html",
+        source => "/home/fkleinbourg/modules-puppet2/apache/files/404.html",
         ensure => file,
         owner => $apache::params::owner,
         mode => 644,
