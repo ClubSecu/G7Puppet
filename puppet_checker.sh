@@ -7,7 +7,7 @@ usage(){
 }
 
 [ $# -ne 1 ] \
-    && usage \
+    && ( usage && exit 1 )\
     || module=$1
 
 echo -e "Checking if directory exists..."

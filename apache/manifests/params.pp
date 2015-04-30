@@ -1,15 +1,17 @@
 class apache::params {
 	case $::osfamily {
 		Debian: {
+            $owner = "www-data"
 			$package_name = apache2
 			$service_name = apache2
-            $owner = www-data
+            $www_path = "/var/www"
 		}
 		
 		RedHat: {
+            $owner = "apache"
 			$package_name = httpd
 			$service_name = httpd
-            $owner = apache
+            $www_path = "/var/www/html"
 		}
 	
 		default: {
