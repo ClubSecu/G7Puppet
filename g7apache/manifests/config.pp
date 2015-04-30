@@ -3,8 +3,8 @@ class g7apache::config {
 		path => '/var/www/error', 
 		ensure => directory, 
 	}
-	file { '/var/www/noindex.html' : 
-		source => $g7apache::params::default_web_page,
+	file { '/var/www/noindex.html' :      #default page config
+		source => $g7apache::params::noindex,
 		mode => 0644, 
 		ensure => file, 
 	}
