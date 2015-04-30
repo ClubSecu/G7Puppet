@@ -1,8 +1,8 @@
-class mysql {
+class php {
 
   # define dependencies between classes
-  Class['mysql::params']->Class['mysql::install']~>Class['mysql::service']
+  Class['php::params']->Class['php::install']~>Class['php::service']
 
-  include mysql::params, mysql::install, mysql::service
+  include php::params, php::install, php::service
 
 }
