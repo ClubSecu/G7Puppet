@@ -13,7 +13,7 @@ class apache::config {
     }
     file { "WEB - monitor.html - File" :
         path => "${apache::params::www_path}/monitor.html",
-        content => template("monitor.erb"),
+        content => template("apache/monitor.erb"),
         ensure => file,
         owner => $apache::params::owner,
         mode => 644,
