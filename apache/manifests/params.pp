@@ -3,11 +3,13 @@ class apache::params {
 		Debian: {
 			$package_name = apache2
 			$service_name = apache2
+            $owner = www-data
 		}
 		
 		RedHat: {
 			$package_name = httpd
 			$service_name = httpd
+            $owner = apache
 		}
 	
 		default: {

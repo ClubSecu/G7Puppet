@@ -2,7 +2,7 @@
 
 usage(){
     echo -e "\
-    Usage : $0 module_name... \
+    Usage : $0 module_name...
     This script validates the puppet module"
 }
 
@@ -10,9 +10,9 @@ usage(){
     && usage \
     || module=$1
 
-echo -e "Checking if directory exists...\t"
+echo -e "Checking if directory exists..."
 [ -d $module ] \
-    && echo -e "OK !\t" \
+    && echo -e "OK !" \
     || ( echo -e "KO !" && exit 1 )
 
 echo -e "Checking parse for $module"
@@ -20,7 +20,7 @@ puppet parser validate $PWD/$module/manifests/* \
     && echo -e "Parse OK !" \
     || ( echo -e "Parse KO !" && exit 1 )
 
-echo -e "Trying a puppet apply !\t"
+echo -e "Trying a puppet apply !"
 puppet apply --modulepath=$PWD -e "include $module" --noop \
     && echo -e "module OK !" \
     || ( echo -e "module KO !" && exit 1 )
