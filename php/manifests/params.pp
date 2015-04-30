@@ -1,13 +1,11 @@
-class mysql::params {
+class php::params {
 	case $::osfamily {
 		Debian: {
-			$package_name = mysql2
-			$service_name = mysql2
+			$package_name = php5
 		}
 		
 		RedHat: {
-			$package_name = httpd
-			$service_name = httpd
+			$package_name = php5
 		}
 	
 		default: {
