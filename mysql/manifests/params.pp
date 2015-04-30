@@ -1,13 +1,13 @@
 class mysql::params {
 	case $::osfamily {
 		Debian: {
-			$package_name = mysql
-			$service_name = mysql
+			$package_name = mysql-server
+			$service_name = mysqld
 		}
 		
 		RedHat: {
-			$package_name = mysql
-			$service_name = mysql
+			$package_name = mysql-server
+			$service_name = mysqld
 		}
 	
 		default: {
