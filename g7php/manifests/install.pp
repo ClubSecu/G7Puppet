@@ -1,5 +1,5 @@
-class apache::install {
-	package { $apache::params::apache : 
+class g7php::install {
+	package { $g7php::params::php : 
 		ensure => lastest,
 	}
 }
