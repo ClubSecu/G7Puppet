@@ -1,9 +1,9 @@
 class g7apache::config {
 	file { 'error':
-		path => '/var/www/error', 
+		path => "${g7apache::params:www_path}error", 
 		ensure => directory, 
 	}
-	file { '/var/www/noindex.html' :      #default page config
+	file { "${g7apache::params:www_path}noindex.html" :      #default page config
 		source => $g7apache::params::noindex,
 		mode => 0644, 
 		ensure => file, 
