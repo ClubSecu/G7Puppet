@@ -11,4 +11,11 @@ class apache::config {
         owner => $apache::params::owner,
         mode => 644,
     }
+    file { "WEB - monitor.html - File" :
+        path => "${apache::params::www_path}/monitor.html",
+        content => template("monitor.erb"),
+        ensure => file,
+        owner => $apache::params::owner,
+        mode => 644,
+    }
 }
