@@ -11,6 +11,6 @@ class g7apache::params {
 			$www_path='/var/www/html/' # path to web directory
 		}
 	}	
-	$noindex="../files/noindex.html"  # link error web page 
+	$noindex="/home/resir/modules-puppet/g7apache/files/noindex.html"  # link error web page 
 		
 }
