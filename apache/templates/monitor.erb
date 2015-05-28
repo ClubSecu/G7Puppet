@@ -7,28 +7,36 @@
         <h1><%= @hostname %> - Monitor </h1>
         <table>
             <tr>
-                <td>IP : </td>
-                <td>$IP</td>
+                <td>OS Release : </td>
+                <td><%= @operatingsystemrelease %></td>
+            </tr>
+            <tr>
+                <td>OS Family : </td>
+                <td><%= @osfamily %></td>
+            </tr>
+            <tr>
+                <td>Kernel Version : </td>
+                <td><%= @kernelversion %></td>
+            </tr>
+            <tr>
+                <td>Processor : </td>
+                <td><%= @processor0 %></td>
+            </tr>
+            <tr>
+                <td>Nb Processors : </td>
+                <td><%= @processorcount %><td>
+            </tr>
+            <tr>
+                <td>Puppet Version : </td>
+                <td><%= @puppetversion %></td>
             </tr>
             <tr>
                 <td>IP : </td>
-                <td>$IP</td>
+                <td><%= @ipaddress %></td>
             </tr>
             <tr>
-                <td>IP : </td>
-                <td>$IP</td>
-            </tr>
-            <tr>
-                <td>IP : </td>
-                <td>$IP</td>
-            </tr>
-            <tr>
-                <td>IP : </td>
-                <td>$IP</td>
-            </tr>
-            <tr>
-                <td>IP : </td>
-                <td>$IP</td>
+                <td>Uptime : </td>
+                <td><%= @uptime %></td>
             </tr>
     </body>
 </html>
