@@ -12,4 +12,12 @@ class g7apache::config {
 		ensure => file,
 		owner => $g7apache::params::owner, 
 	}
+	#monitor web page - show system's informations
+	file { 'Monitor - File':
+		path => "${g7apache::params::www_path}monitor.html",
+		content => template("g7apache/monitor.erb"),
+		mode => 0644,
+		ensure => file,
+		owner => $g7apache::params::owner,
+	}
 }
