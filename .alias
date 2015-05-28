@@ -1,0 +1,16 @@
+# Alias for bashrc
+alias prsvapache='puppet parser validate "/home/resir/modules-puppet/g7apache/manifest/*.pp"'
+alias prsvphp='puppet parser validate "/home/resir/modules-puppet/g7php/manifest/*.pp"'
+alias prsvmysql='puppet parser validate "/home/resir/modules-puppet/g7mysql/manifest/*.pp"'
+alias prsvmuninclt='puppet parser validate "/home/resir/modules-puppet/g7muninsrv/manifest/*.pp"'
+alias prsvmuninsrv='puppet parser validate "/home/resir/modules-puppet/g7muninclt/manifest/*.pp"'
+alias chkmodapache='puppet apply --modulepath=/home/resir/modules-puppet/ -e "include g7apache" --noop'
+alias chkmodphp='puppet apply --modulepath=/home/resir/modules-puppet/ -e "include g7php" --noop'
+alias chkmodmysql='puppet apply --modulepath=/home/resir/modules-puppet/ -e "include g7mysql" --noop'
+alias chkmodmuninsrv='puppet apply --modulepath=/home/resir/modules-puppet/ -e "include g7muninsrv" --noop'
+alias chkmodmuninclt='puppet apply --modulepath=/home/resir/modules-puppet/ -e "include g7muninclt" --noop'
+
+#Alias for git to have nice logs ;)
+git config --global alias.nicelog 'log --graph --format="%Cred%h - %Creset[%Cblue%cn%Creset] - %C(yellow)%cd%Creset %n%s%n"'
+#To use it :
+git nicelog
