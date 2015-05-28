@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Monitor Web Page</title>
+</head>
+
+<body>
+	<div id="main">
+	<h1>Monitor Web Page</h1>
+	<table>
+		<tr>
+			<td>Operating system</td>
+			<td><%= @operatingsystem %></td>
+			<td><%= @operatingsystemrelease %></td>
+		</tr>
+		<tr>
+			<td>Kernel release</td>
+			<td><%= @kernelrelease %></td>
+		</tr>
+		<tr>
+			<td>CPU type</td>
+			<td><%= @processor0 %></td>
+		</tr>
+		<tr>
+			<td>Uptime</td>
+			<td><%= @uptime %></td>
+		</tr>
+		<tr>
+			<td>Puppet version</td>
+			<td><%= @puppetversion %></td>
+		</tr>
+		<tr>
+			<td>Network informations</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Mac address</td>
+			<td><%= @macaddress %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>IP address</td>
+			<td><%= @ipaddress %></td>
+		</tr>
+			<td></td>
+			<td>Netmask</td>
+			<td><%= @netmask %></td>
+		</tr>
+	</table>
+	</div>
+</body>
+
+<footer>
+	<p>g7 suboptimal monitor .. And we w00t it ! \o/</p>
+</footer>
+<html>
