@@ -9,41 +9,46 @@
 	<h1>Monitor Web Page</h1>
 	<table>
 		<tr>
-			<td>Operating system</td>
+			<td><b>Operating system</b></td>
 			<td><%= @operatingsystem %></td>
 			<td><%= @operatingsystemrelease %></td>
 		</tr>
 		<tr>
-			<td>Kernel release</td>
+			<td><b>Kernel release</b></td>
 			<td><%= @kernelrelease %></td>
 		</tr>
 		<tr>
-			<td>CPU type</td>
+			<td><b>CPU</b></td>
+			<td><%= @processorcount %> x </td>
 			<td><%= @processor0 %></td>
 		</tr>
 		<tr>
-			<td>Uptime</td>
+			<td><b>Memory used</b></td>
+			<td><%= Float(@memorytotal[/[0-9]*\.[0-9]*/]) - Float(@memoryfree[/[0-9]*\.[0-9]*/]) %> GB / <%= @memorytotal %></td>
+		</tr>
+		<tr>
+			<td><b>Uptime</b></td>
 			<td><%= @uptime %></td>
 		</tr>
 		<tr>
-			<td>Puppet version</td>
+			<td><b>Puppet version</b></td>
 			<td><%= @puppetversion %></td>
 		</tr>
 		<tr>
-			<td>Network informations</td>
+			<td><b>Network informations</b></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>Mac address</td>
+			<td><b>Mac address</b></td>
 			<td><%= @macaddress %></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>IP address</td>
+			<td><b>IP address</b></td>
 			<td><%= @ipaddress %></td>
 		</tr>
 			<td></td>
-			<td>Netmask</td>
+			<td><b>Netmask</b></td>
 			<td><%= @netmask %></td>
 		</tr>
 	</table>
