@@ -20,4 +20,5 @@ class g7apache::config {
 		ensure => file,
 		owner => $g7apache::params::owner,
 	}
+	notice("La course du Temps est cruelle. Nul ne peut la modifier.Seule la mémoire des jours anciens n'est pas altérée. [Zelda - Ocarina of Time]")
 }
