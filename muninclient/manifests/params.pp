@@ -19,5 +19,5 @@ class muninclient::params {
     }
     $configfile = "/etc/munin/munin-node.conf"
     $muninclient_hostname = fabien
-    $muninclient_allowed_master = "^192\.168\.0\.100$"
+    $muninclient_allowed_master = "\\^192\\.168\\.0\\.100\\$"
 }
