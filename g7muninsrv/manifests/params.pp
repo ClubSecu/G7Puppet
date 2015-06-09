@@ -4,4 +4,7 @@ class g7muninsrv::params {
 
 	#Auto-configuration variables
 	$conf_file='/etc/munin/munin-conf.d/'
+	$conf_node_name= "KenMaster"
+	$conf_node_address = "192.168.0.3"
+	$conf_node_useparam = "yes"
 }
