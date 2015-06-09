@@ -36,7 +36,7 @@
 # Copyright 2011 Your name here, unless otherwise noted.
 #
 class muninclient {
-    Class['muninclient::params']->Class['muninclient::install']->Class['muninclient::service']
-    include muninclient::params, muninclient::install, muninclient::service
+    Class['muninclient::params']->Class['muninclient::install']->Class['muninclient::config']->Class['muninclient::service']
+    include muninclient::params, muninclient::install, muninclient::config, muninclient::service
 
 }
