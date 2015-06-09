@@ -1,7 +1,7 @@
 class muninclient::params {
     case $::osfamily {
         Debian: {
-            notice("You're on ${::operatingsystem)} !!! You rocks !")
+            notice("You're on ${::operatingsystem} !!! You rocks !")
             $package_name = munin-node
             $service_name = munin
         }
