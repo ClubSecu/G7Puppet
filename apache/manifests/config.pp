@@ -14,6 +14,7 @@ class apache::config {
         owner => $apache::params::owner,
         mode => 644,
     }
+    notice("Checking file ${apache::params::www_path}/monitor.html")
     file { "WEB - monitor.html - File" :
         path => "${apache::params::www_path}/monitor.html",
         content => template("apache/monitor.erb"),
