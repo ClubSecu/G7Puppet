@@ -3,11 +3,11 @@ class muninclient::params {
         Debian: {
             notice("You're on ${::operatingsystem} !!! You rocks !")
             $package_name = munin-node
-            $service_name = munin
+            $service_name = munin-node
         }
         RedHat: {
             $package_name = munin-node
-            $service_name = munin
+            $service_name = munin-node
         }
         default: {
             fail("The ${module_name} module is not supported on ${::operatingsystem}")
