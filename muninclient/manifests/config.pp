@@ -1,0 +1,3 @@
+class muninclient::config {
+    
+}
